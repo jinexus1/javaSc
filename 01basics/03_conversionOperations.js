@@ -5,21 +5,21 @@ console.log(typeof(score));//string
 let valueInNumber=Number(score);
 console.log(typeof valueInNumber)//number
 console.log(valueInNumber);//NaN(not a number)
-let score=null
+let score2=null
 
-console.log(typeof(score));//object
+console.log(typeof(score2));//object
 
-let valueInNumber=Number(score);
-console.log(typeof valueInNumber)//number
-console.log(valueInNumber);//0
+let valueInNumber1=Number(score);
+console.log(typeof valueInNumber1)//number
+console.log(valueInNumber1);//0
 
 let score1=undefined
 
 console.log(typeof(score1));//string
 
-let valueInNumber=Number(score1);
-console.log(typeof valueInNumber)//string
-console.log(valueInNumber);//NaN(not a number)
+let valueInNumber2=Number(score1);
+console.log(typeof valueInNumber2)//string
+console.log(valueInNumber2);//NaN(not a number)
 
 
 //"33"=>33
