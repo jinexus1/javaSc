@@ -4,7 +4,8 @@ let myDate= new Date()
 console.log(myDate);//2024-04-18T17:31:51.035Z(as of now)
 let dateString=myDate.toString();
 console.log(dateString);//Thu Apr 18 2024 23:03:27 GMT+0530 (India Standard Time)
-console.log(myDate.toISOString())//2024-04-18T17:35:43.136Z,However, .toISOString()'s behavior can vary. In firefox this outputs a string "Invalid Date" but in chrome it raises an exception.
+console.log(myDate.toISOString())//2024-04-18T17:35:43.136Z,However, .toISOString()'s behavior can vary. In firefox this outputs a string "Invalid Date"
+//but in chrome it raises an exception.
 console.log(myDate.getTime());
 console.log(myDate.toJSON())//2024-04-18T17:35:43.136Z,if you have an invalid date, .toJSON() will output null
 console.log(myDate.getUTCFullYear())//2024
