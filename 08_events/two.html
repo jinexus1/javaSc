@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Chai Aur code</h1>
+  <button id="stop">Stop</button>
+</body>
+<script>
+  setTimeout(function(){
+    console.log("Archit");
+  },2000)
+  /*
+  The global setTimeout() method sets a timer which executes a function or specified piece of code once the timer expires.
+    */
+
+   const sayArchit=function(){
+    console.log("Archit");
+   }
+   setTimeout(sayArchit,2000)//does the same work, but just pass the reference of the function
+   const changeText=function(){
+    document.querySelector('h1').innerHTML='Best js Learning'
+   }
+   const changeMe=setTimeout(changeText,2000)
+   clearTimeout(changeMe)
+
+   document.querySelector('#stop')
+   addEventListener('click',function(){
+    clearTimeout(changeMe)
+    console.log("STOPPED")
+   })
+</script>
+</html>

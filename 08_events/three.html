@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Chai Aur JS</h1>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+</body>
+<script>
+  // setInterval(function(){
+  //   console.log("Archit",Date.now())
+  // })
+  // const sayDate=function(str){
+  //   console.log(str,Date.now);
+  // }
+  const nameConsole=function(){
+      console.log('archit');
+    }
+  
+  // const intervalRef=setInterval(sayDate,1000,'hi')
+  // clearInterval(intervalRef)
+  // var interval
+  // const start=document.querySelector('#start')
+  // addEventListener('click',function(e){
+  //   ineterval=setInterval(nameConsole,1000)
+  // })
+  // const stop=document.querySelector('#stop')
+  // addEventListener('click',function(){
+  //   clearInterval(interval)
+  // })
+  // const start=document.querySelector('#start')
+  // addEventListener('click',function(){
+  //   const interval=setInterval(nameConsole,1000)
+  //   const stop=document.querySelector('#stop')
+  //   addEventListener('click',function(){
+  //     clearInterval(interval)
+  //   })
+  // })
+
+  // const start=document.querySelector('#start')
+  // addEventListener('click',function(){
+  //   const interval=setInterval(function(){
+  //     console.log("archit");
+  //     const stop=document.querySelector('#stop')
+  //     clearInterval(interval)
+  //   },1000)
+  // })
+let interval;
+  document.querySelector('#start').addEventListener('click',function(){
+    interval=setInterval(nameConsole,1000)
+  })
+document.querySelector('#stop').addEventListener('click',function(){
+  clearInterval(interval)
+})
+  
+</script>
+</html>
