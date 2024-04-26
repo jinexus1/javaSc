@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="objective.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="card">
+  <img src="img_avatar.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>John Doe</b></h4>
+    <p>Architect & Engineer</p>
+  </div>
+</div>
+</body>
+<script>
+ const requestUrl="https://api.github.com/users/hiteshchoudhary"
+ const xhr=new XMLHttpRequest();
+  xhr.open("GET",requestUrl)
+  xhr.onreadystatechange=function(){
+    console.log(xhr.readyState);
+    if(xhr.readyState===4){
+      console.log(this.responseText);
+      //const data=this.responseText
+      //console.log(typeof data);//mostly the data comes in string format form the api
+      const data=JSON.parse(this.responseText)
+      //converting the string into JSON Object
+      console.log(data.followers);
+    }
+  }
+  console.log(xhr.readyState);
+  xhr.send()
+
+</script>
+</html>
