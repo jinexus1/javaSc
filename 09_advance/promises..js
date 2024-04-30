@@ -5,46 +5,71 @@
 //pending: initial state, neither fulfilled nor rejected.
 // fulfilled: meaning that the operation was completed successfully.
 // rejected: meaning that the operation failed.
-const promiseOne=new Promise(function(resolve,reject){
+const promiseOne = new Promise(function(resolve, reject){
+  //Do an async task
+  // DB calls, cryptography, network
   setTimeout(function(){
-    console.log('Async task is complete')
-    resolve()
-  },1000)
-})//promise created
+      console.log('Async task is compelete');
+      resolve()
+  }, 1000)
+})
+
 promiseOne.then(function(){
-  console.log("Promise Consumed");
-})//promise consumed
-//another way to create promise
-new Promise(function(resolve,reject){
+  console.log("Promise consumed");
+})
+
+new Promise(function(resolve, reject){
   setTimeout(function(){
-    console.log("Async Task  2");
-    resolve();
-  },1000)
+      console.log("Async task 2");
+      resolve()
+  }, 1000)
+
 }).then(function(){
   console.log("Async 2 resolved");
 })
-//promise three
-const promiseThree=new Promise(function(resolve,reject){
+
+const promiseThree = new Promise(function(resolve, reject){
   setTimeout(function(){
-    resolve({username:"jinxus",email:"ap2929470@gmail.com"})//passing value to an obj
-  },1000)
-})
-promiseThree.then(function(user){
-  console.log(user);//{ username: 'jinxus', email: 'ap2929470@gmail.com' }
+      resolve({username: "Chai", email: "chai@example.com"})
+  }, 1000)
 })
 
-const promiseFour=new Promise(function(resolve,reject){
-  setTimeout(function(){
-    let error=true
-    if(!error){
-      resolve({username:"jinexus",password:"123"})
-    }else{
-      reject("ERROR: SOmething went wrong")
-    }
-  },1000)
-})
-const username=promiseFour.then((user)=>{
+promiseThree.then(function(user){
   console.log(user);
-  return 
-  user.username
 })
+
+const promiseFour = new Promise(function(resolve, reject){
+  setTimeout(function(){
+      let error = true
+      if (!error) {
+          resolve({username: "jin", password: "123"})
+      } else {
+          reject('ERROR: Something went wrong')
+      }
+  }, 1000)
+})
+
+promiseFour
+.then((user) => {
+  console.log(user);
+  return user.username
+}).then((username) => {
+  console.log(username);
+}).catch(function(error){
+  console.log(error);
+}).finally(() => console.log("The promise is either resolved or rejected"))
+
+const promiseFive=new Promise(function(resolve,reject){
+  setTimeout(function(){
+    let error = true
+    if (!error) {
+        resolve({username: "javascript", password: "123"})
+    } else {
+        reject('ERROR: Js went wrong')
+    }
+}, 1000)
+})
+
+async function consumePromiseFive(){
+  await promiseFive
+} 
