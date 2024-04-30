@@ -30,7 +30,7 @@ new Promise(function(resolve, reject){
 
 const promiseThree = new Promise(function(resolve, reject){
   setTimeout(function(){
-      resolve({username: "Chai", email: "chai@example.com"})
+      resolve({username: "jin", email: "ap2929@example.com"})
   }, 1000)
 })
 
@@ -71,5 +71,30 @@ const promiseFive=new Promise(function(resolve,reject){
 })
 
 async function consumePromiseFive(){
-  await promiseFive
+  try {
+    const response=await promiseFive//promise is an object
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
 } 
+consumePromiseFive()
+
+
+async function getUser(){
+  try {
+    const response=await fetch('https://api.github.com/users/jinexus1')
+  const data=await response.json()
+  console.log(data);
+  } catch (error) {
+   console.log("E:",error); 
+  }
+}
+getUser()
+
+fetch('https://api.github.com/users/jinexus1')
+.then(()=>{
+  return response.json()
+}).then((data)=>{
+  console.log(data);
+}).catch((error)=>console.log(error))
