@@ -151,4 +151,12 @@ const book = getBook(1);
 //Destructuring
 const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
   book;
-console.log(title, author, pages, publicationDate, genres, hasMovieAdaptation);
+//console.log(title, author, pages, publicationDate, genres, hasMovieAdaptation);
+const [primary, secondary, ...otherGenres] = genres; //rest operator
+console.log(primary, " ", secondary, otherGenres);
+//spread operator
+const newGenres = [...genres, "epic fantasy"];
+console.log(newGenres);
+//Tempate Literals
+const summary = `${title}, a ${pages} pages book, was written by ${author} which was published in ${publicationDate}`;
+summary;
