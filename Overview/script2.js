@@ -135,64 +135,7 @@ const data = [
   },
 ];
 
-function getBooks() {
-  return data;
-}
+const book = getBook();
 
-function getBook(id) {
-  return data.find((d) => d.id === id);
-}
-
-//const books = getBooks();
-const book = getBook(1);
-// const title = book.title;
-// const author = book.author;
-
-//Destructuring
-const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
-  book;
-//console.log(title, author, pages, publicationDate, genres, hasMovieAdaptation);
-const [primary, secondary, ...otherGenres] = genres; //rest operator
-console.log(primary, " ", secondary, otherGenres);
-//spread operator
-const newGenres = [...genres, "epic fantasy"];
-console.log(newGenres);
-//Tempate Literals
-const summary = `${title}, a ${pages} pages book, was written by ${author} which was published in ${publicationDate}`;
-summary;
-//Short Circuiting
-console.log(true && "Some String");
-console.log(false && "Some String"); //directly returned false didn't even went through the
-//entire expression
-//fasly values= null, 0, "", undefined,
-//nullish coalescing operator
-const foo = null ?? "default string";
-console.log(foo);
-// Expected output: "default string"
-
-const baz = 0 ?? 42;
-console.log(baz);
-// Expected output: 0
-
-//Optional Chaining
-const adventurer = {
-  name: "Alice",
-  cat: {
-    name: "Dinah",
-  },
-};
-//if adventure.cat exist then the output will be given else it will be underfined
-
-const catName = adventurer.cat?.name;
-console.log(catName);
-// Expected output: undefined
-
-// const dogName = adventurer.dog?.name;
-// console.log(dogName);
-// // Expected output: undefined
-//use of nulluish col
-const dogName = adventurer.dog?.name ?? 0;
-console.log(dogName);
-//output: 0
-console.log(adventurer.someNonExistentMethod?.());
-// Expected output: undefined
+const x = [1, 2, 3, 4, 5].map((el) => el * 2);
+console.log(x);
