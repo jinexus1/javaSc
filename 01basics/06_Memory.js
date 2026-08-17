@@ -1,6 +1,8 @@
 //Stack, Heap
-//Stack=>Primitive
-//Heap=>Non Primitive
+//Stack=>Primitive- Copy of value is provided 
+// string, number, bigint, boolean, undefined, symbol
+//Heap=>Non Primitive- Reference of the original is provided
+// Object, Array, Function
 let myName="archit_pandey"
 let anotherName=myName
 anotherName="Eshu_pandey"

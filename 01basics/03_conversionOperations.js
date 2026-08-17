@@ -47,7 +47,7 @@ console.log(2%3);//mod
 let str1="jin"
 let str2="exus"
 let str3= str1+str2
-console.log(str3);
+console.log(str3)
 //OR
 console.log(str1+str2);
 
@@ -71,3 +71,13 @@ const y = x++;//the increment operator increments and returns the value before i
 let x2 = 3n;
 const y2 = x2++;//the increment operator increments and returns the value after incrementing.
 // x2 is 4n; y2 is 3n
+
+let bina=0b101
+console.log(typeof(bina));//number
+console.log(bina);//5
+
+let octa=0o755;
+console.log(typeof(octa));//number
+console.log(octa);// 493
+
+
