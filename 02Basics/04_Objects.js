@@ -1,4 +1,4 @@
-const metaUser=new Object()//this is single ton obejct
+const metaUser=new Object()//this is singleton object
 console.log(metaUser);//{}
  const XUser={}//Not a singleton object
  console.log(XUser);//{}
@@ -13,7 +13,7 @@ console.log(metaUser);//{}
 
   }
  }
- console.log(regularUser.fullname.Name.firstName);//asscessing object value
+ console.log(regularUser.fullname.Name.firstName);//accessing object value
 //Jin
 const obj1={
   1:"a",
@@ -49,3 +49,5 @@ console.log(obj4);//{ '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
 
  console.log(Object.keys(metaUser));
  console.log(Object.values(metaUser))
+ console.log(Object.entries(metaUser));
+ 

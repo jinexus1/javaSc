@@ -1,5 +1,5 @@
 //dates starts from 1 January,1970,UTC
-//tc39 has made a propasal to ECMAScript to make Temopral to make it as global object
+//tc39 has made a proposal to ECMAScript to make Temporal to make it as global object
 let myDate= new Date()
 console.log(myDate);//2024-04-18T17:31:51.035Z(as of now)
 let dateString=myDate.toString();

@@ -33,14 +33,15 @@ console.log("Before freeze,",JsUSer);
 /* 
 Before freeze, {
   name: 'Jin',
-  'full name': 'Jinexus',
+  'full name': 'Jinexus', I have to go now because I took work from home go home I have to go office from work
   mySym: 'mykey1',
-  age: 21,
+  age: 21, method creation method prototype
   location: 'Jaipur',
   email: 'jinexus123@gmail.com',
   isLoggedIn: true,
   [Symbol(key2)]: 'myKey2'
 }*/
+Object.freeze(JsUSer)
 JsUSer.email="jinexus12334@gmail.com"
 console.log("After Freeze,",JsUSer);
 /*After Freeze, {

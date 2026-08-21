@@ -2,7 +2,7 @@ const score=400
 console.log(score);//400
 const balance=new Number(100)
 console.log(balance);//[Number: 100]
-console.log(balance.toString().length);
+console.log(balance.toString().length);//3
 const str=balance.toString()
 console.log(typeof(balance));//object
 console.log(typeof str);//string

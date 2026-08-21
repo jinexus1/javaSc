@@ -1,4 +1,4 @@
-
+ 
 // if(true){
 //   let a=1
 //   const b=2
@@ -51,13 +51,14 @@ if(true){
   }
 }
 //++++++++++++++++++INTERESTING
+//The below concept is called hoisting
 console.log(addone(2));//3, able to access it before 
 function addone(num){
   return num+1
 }
 console.log(addTwo(8));
 //ReferenceError: Cannot access 'addTwo' before initialization
-//now unable to access before because it is held in a vaiable
+//now unable to access before because it is held in a variable
 const addTwo=function(num){
   return num+2
 }
